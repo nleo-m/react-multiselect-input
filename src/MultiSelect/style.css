@@ -1,0 +1,48 @@
+.flex {
+  display: flex;
+  gap: 12px;
+}
+
+.multiselect-box {
+  border: 1px solid #cbd5e0;
+  border-radius: 16px;
+  padding: 1em;
+  min-height: fit-content;
+  max-width: 100%;
+  margin: 1em;
+}
+
+.multiselect-badge {
+  display: flex;
+  min-width: 50px;
+  max-width: fit-content;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.multiselect-label {
+  font-size: 14px;
+  margin-right: 12px;
+}
+
+.multiselect-remove-btn {
+  background-color: #e53e3e;
+  color: #fff5f5;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.multiselect-remove-btn:hover {
+  color: #fed7d7;
+  background-color: #c93030;
+}
+
+.multiselect-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+}
