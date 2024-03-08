@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IMultiselect } from "./types";
 import "./style.css";
 
-export const isColorDark = (color) => {
+export const isColorDark = (color: any) => {
   // Converte a cor para o formato RGB
   const rgb = color.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i);
   const r = parseInt(rgb[1], 16);
@@ -18,11 +18,11 @@ export const isColorDark = (color) => {
   return yiq < threshold;
 };
 
-export const getContrastColor = (color) => {
+export const getContrastColor = (color: string) => {
   return isColorDark(color) ? "#E3FFF2" : "#282B2A";
 };
 
-const isEmpty = (str) => {
+const isEmpty = (str: string) => {
   str = str.trim();
   return str === "" || str === null;
 };
@@ -61,7 +61,7 @@ export default function MultiSelect({
       .filter((option) => option !== null && option !== undefined) || []
   );
 
-  const handleSelect = (e) => {
+  const handleSelect = (e: any) => {
     if (isEmpty(e.target.value) || e.target.value === "action") return;
 
     const newValue = {
@@ -77,7 +77,7 @@ export default function MultiSelect({
     setSelected((selected) => [...selected, newValue]);
   };
 
-  const handleRemove = (removed) => {
+  const handleRemove = (removed: any) => {
     setOptions((availableOptions) => [...availableOptions, removed]);
     setSelected((selected) => [
       ...selected.filter((option) => option?.value !== removed?.value),
